@@ -1,0 +1,30 @@
+html,
+body,
+#root {
+  height: 100dvh;
+  width: 100dvw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.navlink {
+  color: #335c63;
+  text-decoration: none;
+  font-weight: 600;
+  margin-block: 2px;
+  width: 100%;
+  padding-inline: 10px;
+  padding-block: 1px;
+  border-radius: 10px;
+}
+.navlink:hover {
+  background-color: #cffafa90;
+  /* color: #ffffff; */
+} 
+.active {
+  background-color: #cffafa;
+  /* color: #ffffff; */
+}
