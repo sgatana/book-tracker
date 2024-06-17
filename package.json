@@ -1,0 +1,17 @@
+{
+  "name": "book-tracker",
+  "version": "1.0.0",
+  "description": "![svgviewer-output](https://github.com/ElloTechnology/backend_takehome/assets/3518127/561bc8d4-bffc-4360-b9ea-61e876bcec93)",
+  "main": "index.js",
+  "scripts": {
+    "start:frontend":"cd ./frontend && npm run dev",
+    "start:backend":"cd ./backend && npm run start:dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
