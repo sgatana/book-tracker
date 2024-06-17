@@ -1,4 +1,6 @@
-export const booksData = [
+import { Book } from '../types';
+
+export const booksData: Book[] = [
   {
     'title': 'Curious Princess and the Enchanted Garden',
     'author': 'Reese Smith',
@@ -600,3 +602,5 @@ export const booksData = [
     'readingLevel': 'J'
   }
 ];
+
+export const readingList: Book[] = [];
