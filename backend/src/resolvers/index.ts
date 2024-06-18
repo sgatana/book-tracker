@@ -20,7 +20,7 @@ export const resolvers = {
       return readingList;
     },
     deleteReadingListBook: (_: unknown, { title }: DeleteInput) => {
-      const index = readingList.findIndex((book) => book?.title !== title);
+      const index = readingList.findIndex((book) => book?.title === title);
       readingList.splice(index, 1);
       return readingList;
     },
