@@ -4,45 +4,32 @@
 # Ello Engineering Challenge
 
 👋 Hello,
-We are really excited about you potentially joining the team, so we designed this take home exercise to give you a taste of the challenges you may encounter in the role, and better understand what it would be like to work closely together.
 
-Thanks for taking the time, and we hope to talk with you soon!
+This repo contains the solution for technical challenge. To view detailed challenge, please visit company's repo [👉 here](https://github.com/ElloTechnology/fullstack-take-home-test)
 
-## About Ello
+## Solution
+The app contains a teacher-facing UI that allows teachers to view, search and assign books to students' reading list.
 
-Ello is a forward-thinking educational technology company dedicated to revolutionizing the way children learn to read. Our mission is to empower young readers with the tools they need to become proficient and passionate readers. We believe that fostering a love for reading is essential for a child's academic and personal growth.
-
-**Note:** Please don't fork this repository or create a pull request against it. Other applicants may take inspiration from it. You should create another repository for the challenge. Once the coding challenge is completed, email your solution back to our team at [fullstack2024@ello.com](mailto:fullstack2024@ello.com).
-
-
-## Challenge
-As part of our goal to have Ello impact as many children as we can, we offer an Ello web viewer product. [https://books.ello.com](https://books.ello.com/)
-
-
-We give this to certain schools for free to allow teachers to share our books with children. 
-You are building part of the teacher-facing UI for this product,
-namely the book assignment view, where teachers can assign books to students. 
-
-The view should have the following features:-
-
-1. A search bar that allows users to search for books by title.
-2. A list of search results that displays the book title, author, and a button to add the book to the students reading list.
-3. A reading list that displays all the books that the teacher has added.
-4. A button to remove a book from the reading list.
-
-You can build this view without the concept of a "student" and just have a single reading list for the teacher.
+```
+To run the fullstack app concurrently (both frontend and backend):-
+- install packages
+  - run `npm i or npm install`
+- Run `npm start` 
+```
 
 ### Requirements
+The app uses:-
 - Use React as the frontend framework.
-- Showcase the use of React hooks.
-- Use [material-ui](https://mui.com/material-ui/) as the component library.
-- Write your code in the `src/frontend` directory.
-- Create components as you feel is best suited for your solution
-<img width="1013" alt="Screenshot 2024-05-15 at 19 10 51" src="https://github.com/ElloTechnology/fullstack-take-home-test/assets/3518127/bc3eb7f7-489f-4304-93f4-032bbbd38c58">
+- react hooks React hooks.
+- [material-ui](https://mui.com/material-ui/) as the component library.
+- **Note** Frontend code is inside the `src/frontend` directory.
 
 
-### Data
-To get access to data that you will use for this challenge you can switch into the `src/backend` folder and run
+### Backend
+Backend code has been modified to incorporating additional resolvers for functionalities not explicitly outlined in the requirements, such as the ability to search books, list books under a student's reading list or to remove books from said reading list.
+View the updated code in the  `src/backend` folder.
+
+To run the backend independently, execute
 
 ```bash
 npm install
@@ -69,17 +56,46 @@ query Books {
 
 You can use this query to get the list of books to display in your frontend. You may need to adjust the `coverPhotoURL` to be a valid URL. The photos are in the `src/frontend/assets` directory.
 
-### Styling Guidelines
-- Use the "Mulish" Google font
-- You can use the following colors (You don't have to use all but you can pick and choose from here)
-<img width="961" alt="Screenshot 2024-05-14 at 17 36 40" src="https://github.com/ElloTechnology/fullstack-take-home-test/assets/3518127/15922f8f-a7c7-4033-8405-76988e95afb3">
+### Frontend
 
+Frontend code / *Ello for teachers* allows teachers to view, search and assign books to reading list.
+View the updated code in the  `src/backend` folder.
+#### Prerequisites
 
+Node version >= 20.x
 
+#### Getting Started
+To run frontend code independently:-
+- clone the Repo
+- #### install packages
+  - run `npm i/ npm install`
 
-### You will be evaluated on
-- Code quality and organization.
-- User experience and design.
-- Beautiful and responsive UI.
+#### Run the app
+cd to `frontend` folder
+
+- Run development server using `npm run dev` or `yarn dev`
+- You can generate production build using `npm run build` or `yarn build`. Generated files will be stored in the `dist` folder
+
+#### Frontend Folder Structure
+
+| dir/file          | description                                          |
+| :---------------- | :--------------------------------------------------- |
+| `src `            | contains application files                           |
+| `src/main.tsx `   | root file and where route paths are defined                                            |
+| `src/routes `    | contains pages                     |
+| `src/components ` | house all UI components needed for the application   |
+| `src/hooks `      | contains custom hooks                            |
+| `src/queries `      | contains apollo queries and mutations for API calls to the backend                           |
+| `src/assets `    | contains images |
+| `src/types `    | typescript types            |
+
+####  Frontend Libraries / Packages
+**N.B** check package.json files to all packages used by the app
+
+### **Running fullstack app concurrently**
+To run the fullstack app concurrently (both frontend and backend):-
+- #### install packages
+  - run `npm i or npm install`
+- Run `npm start`
 
 
