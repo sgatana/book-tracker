@@ -25,15 +25,13 @@ const SideNav = () => {
           },
         }}
       >
-        {navLinks.map(({name, href}) => (
+        {navLinks.map(({ name, href }) => (
           <NavLink
             className={({ isActive }) => clsx('navlink', { active: isActive })}
             to={href}
             key={name}
           >
-            <ListItemText  sx={{ width: '100%' }}>
-              {name}
-            </ListItemText>
+            <ListItemText sx={{ width: '100%' }}>{name}</ListItemText>
           </NavLink>
         ))}
       </MenuList>

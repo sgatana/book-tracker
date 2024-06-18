@@ -7,9 +7,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import theme from './theme.ts';
 import './index.css';
 import Books from './routes/Books.tsx';
-import BookDetails from './routes/BookDetails.tsx';
 import ReadingList from './routes/ReadingList.tsx';
 import RootLayout from './routes/Root.tsx';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const router = createBrowserRouter([
   {
@@ -21,10 +21,6 @@ const router = createBrowserRouter([
         element: <Books />,
       },
       {
-        path: '/books/:id',
-        element: <BookDetails />,
-      },
-      {
         path: '/reading-list',
         element: <ReadingList />,
       },
@@ -32,11 +28,19 @@ const router = createBrowserRouter([
   },
 ]);
 
+export const client = new ApolloClient({
+  uri: 'http://localhost:4000/',
+  cache: new InMemoryCache(),
+  
+});
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <RouterProvider router={router} />
+      <ApolloProvider client={client}>
+        <RouterProvider router={router} />
+      </ApolloProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

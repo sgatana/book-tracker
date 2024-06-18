@@ -1,6 +1,8 @@
 import { AppBar, Toolbar, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <AppBar
       position='fixed'
@@ -18,9 +20,11 @@ const Header = () => {
         <Typography
           variant='h6'
           noWrap
+          role='button'
+          onClick={() => navigate('/')}
           component='nav'
           id='heading'
-          sx={{ flexGrow: 1 }}
+          sx={{ flexGrow: 1, cursor: 'pointer' }}
           color='primary'
         >
           Ello for Teachers
