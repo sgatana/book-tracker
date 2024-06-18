@@ -8,7 +8,7 @@ import { Book } from '../types';
  */
 
 const BookCard = ({
-  book: { title, author, coverPhotoURL },
+  book: { title, author, coverPhotoURL, readingLevel },
   onSelectBook,
   isReadingListPage,
 }: {
@@ -23,7 +23,7 @@ const BookCard = ({
           borderRadius: theme.spacing(1),
           boxShadow: 'rgba(145, 158, 171, 0.16) 0px 1px 2px 0px',
           padding: theme.spacing(2),
-          height: { xs: 'auto', lg: 120 },
+          height: { xs: 'auto', lg: 130 },
           fontSize: {
             xs: '0.75rem',
             lg: '0.875rem',
@@ -42,6 +42,7 @@ const BookCard = ({
         />
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <span>{title}</span>
+          {isReadingListPage && <span>Reading Level: {readingLevel}</span>}
           <span>
             <i>by: {author}</i>
           </span>

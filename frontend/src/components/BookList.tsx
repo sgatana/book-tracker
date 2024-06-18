@@ -69,7 +69,6 @@ const BookList = ({ books }: { books: Book[] }) => {
             item
             xs={12}
             md={4}
-            lg={3}
             key={`${book.title}-${book.author}-${book.readingLevel}`}
           >
             <BookCard
